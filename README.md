@@ -8,23 +8,23 @@ Interactive graph explorer that maps relationships between actors and films usin
 
 ## Tech Stack
 
-| Layer | Tools |
-|---|---|
+| Layer     | Tools                                                                    |
+| --------- | ------------------------------------------------------------------------ |
 | Data & ML | Python, Hugging Face `datasets`, Pandas, NetworkX, Neo4j + GDS, Node2Vec |
-| Backend | FastAPI, Uvicorn, Neo4j Python driver, Pydantic |
-| Frontend | React, TypeScript, Sigma.js, TanStack Query, Zustand, Tailwind, Vite |
-| Infra | Docker + Docker Compose (Neo4j, pgvector) |
+| Backend   | FastAPI, Uvicorn, Neo4j Python driver, Pydantic                          |
+| Frontend  | React, TypeScript, Sigma.js, TanStack Query, Zustand, Tailwind, Vite     |
+| Infra     | Docker + Docker Compose (Neo4j, pgvector)                                |
 
 ---
 
 ## Prerequisites
 
-| Tool | Version | Purpose |
-|---|---|---|
-| Python | 3.11+ | Data pipeline, backend |
-| uv | latest | Environment and dependency management |
-| Docker + Docker Compose | latest | Neo4j, pgvector |
-| Node.js | 18+ | Frontend (Phase 3+) |
+| Tool                    | Version | Purpose                               |
+| ----------------------- | ------- | ------------------------------------- |
+| Python                  | 3.11+   | Data pipeline, backend                |
+| uv                      | latest  | Environment and dependency management |
+| Docker + Docker Compose | latest  | Neo4j, pgvector                       |
+| Node.js                 | 18+     | Frontend (Phase 3+)                   |
 
 Install `uv` if you don't have it:
 
@@ -106,11 +106,11 @@ uv run jupyter notebook
 
 Notebooks are in `scripts/pipeline/notebooks/`:
 
-| Notebook | Purpose |
-|---|---|
-| `01_explore_dataset.ipynb` | Load dataset, inspect schema, understand data structure |
-| `02_clean_data.ipynb` | Prototype cleaning logic with before/after samples |
-| `03_validate_results.ipynb` | Spot-check Neo4j queries, verify correctness |
+| Notebook                    | Purpose                                                 |
+| --------------------------- | ------------------------------------------------------- |
+| `01_explore_dataset.ipynb`  | Load dataset, inspect schema, understand data structure |
+| `02_clean_data.ipynb`       | Prototype cleaning logic with before/after samples      |
+| `03_validate_results.ipynb` | Spot-check Neo4j queries, verify correctness            |
 
 ### Running Pipeline Scripts
 
@@ -169,15 +169,15 @@ letterboxd-cinema-graph/
 
 ## Build Phases
 
-| Phase | Goal | Status |
-|---|---|---|
-| 1 — Data Pipeline | Populated Neo4j database with working Cypher queries | In Progress |
-| [`phases/phase-1-data-pipeline.md`](phases/phase-1-data-pipeline.md) |
-| 2 — Backend API | REST API returning graph JSON for all v1 endpoints | Planned |
-| [`phases/phase-2-backend-api.md`](phases/phase-2-backend-api.md) |
-| 3 — Frontend Explorer | React app with interactive Sigma.js graph canvas | Planned |
-| [`phases/phase-3-frontend-explorer.md`](phases/phase-3-frontend-explorer.md) |
-| 4 — ML Recommendations | Node2Vec embeddings + similar film/actor suggestions | Planned |
+| Phase                                                                          | Goal                                                 | Status      |
+| ------------------------------------------------------------------------------ | ---------------------------------------------------- | ----------- |
+| 1 — Data Pipeline                                                              | Populated Neo4j database with working Cypher queries | In Progress |
+| [`phases/phase-1-data-pipeline.md`](phases/phase-1-data-pipeline.md)           |
+| 2 — Backend API                                                                | REST API returning graph JSON for all v1 endpoints   | Planned     |
+| [`phases/phase-2-backend-api.md`](phases/phase-2-backend-api.md)               |
+| 3 — Frontend Explorer                                                          | React app with interactive Sigma.js graph canvas     | Planned     |
+| [`phases/phase-3-frontend-explorer.md`](phases/phase-3-frontend-explorer.md)   |
+| 4 — ML Recommendations                                                         | Node2Vec embeddings + similar film/actor suggestions | Planned     |
 | [`phases/phase-4-ml-recommendations.md`](phases/phase-4-ml-recommendations.md) |
 
 Full specifications: [`phases/`](phases/)
@@ -213,5 +213,3 @@ Use **WSL2** (Windows Subsystem for Linux). Native Windows is not recommended be
 ## License
 
 MIT — free for educational and research use.
-
-The Letterboxd dataset is sourced from TMDB and carries its own attribution requirements. Check Letterboxd's terms of service before deploying publicly.
